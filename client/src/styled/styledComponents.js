@@ -17,7 +17,13 @@ const MainText = styled.p`
 `;
 
 const FormDiv = styled.div`
-  text-align: center;
+  padding:20px;
+  width:40%;
+  margin: 0 auto;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items:center;
 `;
 
 export {

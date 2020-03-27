@@ -4,7 +4,8 @@ import { axiosWithAuth } from "../utils/axiosWithAuth";
 import {
   Welcome,
   WelTitle,
-  MainText
+  MainText,
+  FormDiv
 } from '../styled/styledComponents';
 
 
@@ -46,8 +47,9 @@ const Login = () => {
   return (
     <Welcome>
       <WelTitle>Welcome to the Bubble App!</WelTitle>
-      <div>
+      <FormDiv>
          <form onSubmit={login} >
+         <div>
          <label><MainText>Username: {' '}</MainText></label>
           <input 
           type="text"
@@ -55,6 +57,8 @@ const Login = () => {
           value={username}
           onChange={handleChange}
           />
+          </div>
+          <div>
           <label><MainText>Password: {' '}</MainText></label>
           <input 
           type="password"
@@ -62,9 +66,12 @@ const Login = () => {
           value={password}     
           onChange={handleChange}
           />
+          </div>
+          <div>
           <button>Login</button>
+          </div>
         </form> 
-      </div>
+      </FormDiv>
     </Welcome>
   );
 };
